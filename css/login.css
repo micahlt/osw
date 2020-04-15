@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap');
+
+body {
+  overflow: hidden;
+}
+
+.CORE-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/3451757/pexels-photo-3451757.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.CORE-login-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  height: 70vh;
+}
+
+.CORE-login-box {
+  height: fit-content;
+  width: 100% !important;
+  backdrop-filter: blur(15px);
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.CORE-login-box p {
+  text-align: center;
+}
+
+.CORE-profile-photo {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.visible {
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.CORE-time-box {
+  color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-63%, -50%);
+  text-align: center;
+  height: fit-content;
+}
+
+.CORE-time {
+  font-size: 8.2em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.CORE-date {
+  font-family: 'Inter', sans-serif;
+  transform: translateY(-20px);
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.CORE-login-box input::placeholder {
+  color: white;
+  font-family: 'feather';
+  text-align: left;
+  font-size: 0.6em !important;
+}
+
+.CORE-login-box input {
+  margin-top: 25px;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  border-right: none;
+  outline: none;
+  width: 70%;
+  caret-color: white;
+  color: white;
+  font-family: 'Lato', 'Inter', sans-serif;
+  font-size: 1.3em;
+  transition: 0.15s;
+}
+
+.CORE-login-box input:focus {
+  border-bottom: 4px solid white;
+  transition: 0.1s;
+}
+
+.CORE-login-button {
+  margin-bottom: 30px;
+  color: rgba(20, 20, 20, 1);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}

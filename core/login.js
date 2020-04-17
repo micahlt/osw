@@ -1,21 +1,24 @@
-function updateHugeClock() {
+import * as st from './shortener.js';
+
+let corePswdBlank = st.elemDefId('CORE-pswd-blank'),
+  coreUsernameBlank = st.elemDefId("CORE-username-blank");
+
+function updateLockClock() {
   let d = new Date();
-  document.getElementById("CORE-hr").innerText = d.getHours();
-  document.getElementById("CORE-mnt").innerText = d.getMinutes();
-  document.getElementById("CORE-mth").innerText = d.getMonth();
-  document.getElementById("CORE-day").innerText = d.getDate();
-  document.getElementById("CORE-yr").innerText = d.getFullYear();
+  st.elemDefId("CORE-hr").innerText = d.getHours();
+  st.elemDefId("CORE-mnt").innerText = d.getMinutes();
+  st.elemDefId("CORE-mth").innerText = d.getMonth();
+  st.elemDefId("CORE-day").innerText = d.getDate();
+  st.elemDefId("CORE-yr").innerText = d.getFullYear();
 }
-updateHugeClock();
-setInterval(updateHugeClock, 10)
+setInterval(updateLockClock, 10);
 window.addEventListener("load", function() {
   setTimeout(function() {
-    document.getElementById("CORE-loading").style.display = "none";
-    console.log("log in");
-    document.getElementsByClassName("CORE-login")[0].classList.replace('hidden', 'visible');
+    st.elemDefId("CORE-loading").style.display = "none";
+    st.firstOfClass("CORE-login").classList.replace('hidden', 'visible');
     setTimeout(function() {
-      document.getElementsByClassName("CORE-login-box")[0].classList.replace('hidden', 'visible');
-      document.getElementsByClassName("CORE-time-box")[0].classList.replace('hidden', 'visible');
+      st.firstOfClass("CORE-login-box").classList.replace('hidden', 'visible');
+      st.firstOfClass("CORE-time-box").classList.replace('hidden', 'visible');
     }, 1000)
   }, 3000)
 });
